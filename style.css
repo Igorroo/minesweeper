@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Aldrich", sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+}
+main{
+    background-color: darkgray;
+    width: 256px;
+    height: calc(256px + 40px);
+}
+.topBar{
+    height: 32px;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.topBar>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+.topBar>div>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8px;
+}
+.play>div{
+    width: 25px;
+    height: 25px;
+    background-color: darkgray;
+}
+.reset>div{
+    width: 25px;
+    height: 25px;
+    background-color: darkgray;
+}
+.result>div{
+    width: 25px;
+    height: 25px;
+    background-color: darkgray;
+}
+.minefield{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table{
+    width: 256px;
+    height: 256px;
+    border-spacing: 0;
+}
+td{
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    transition: 0.1s ease-in-out;
+    transform: scale(1);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 16px;
+    text-overflow: ellipsis;
+}
+td>img{
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 6px;
+    top: 5px;
+}
+td:hover{
+    transform: scale(1.05);
+    border-color: rgb(160, 160, 160);
+    background-color: magenta;
+}
+/* clicked */
+td.shown{
+    opacity: 1;
+    font-size:large;
+    background-color: darkgray;
+    border-left: 2px solid gray;
+    border-top: 2px solid gray;
+    border-right: 2px solid rgb(145, 145, 145);
+    border-bottom: 2px solid rgb(145, 145, 145);
+}
+/* not clicked */
+td.hidden{
+    font-size:0;
+    background-color: lightgray;
+    border-right: 2px solid gray;
+    border-bottom: 2px solid gray;
+    border-left: 2px solid rgb(145, 145, 145);
+    border-top: 2px solid rgb(145, 145, 145);
+
+}
+td.noBomb>img{
+    opacity: 0;
+}
+td.bomb.shown>img{
+    opacity: 1;
+}
+td.bomb.hidden>img{
+    display: none;
+}
+td.num1.shown{
+    color: rgb(0, 170, 0);
+}
+td.num2.shown{
+    color: yellow;
+}
+td.num3.shown{
+    color: orange;
+}
+td.num4.shown{
+    color: red;
+}
+td.num5.shown{
+    color: darkred;
+}
+td.num6.shown{
+    color: violet;
+}
+td.num7.shown{
+    color: purple;
+}
+td.num8.shown{
+    color: black;
+}
+td.num9.shown{
+    border-color: red;
+}
