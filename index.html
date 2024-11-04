@@ -8,92 +8,96 @@
     <script src="script.js"  defer></script>
 </head>
 <body>
+    <div></div>
     <main>
         <div class="topBar">
-            <div class="play" onclick="getRandom()"><div>play</div></div>
-            <div class="reset" onclick="location.reload()"><div>reset</div></div>
-            <div class="result"><div>-</div></div></div>
+            <div class="play" onclick="getRandom()"><img src="media/play.svg" alt=""></div>
+            <div class="reset" onclick="location.reload()"><img src="media/refresh.svg" alt=""></div>
+            <div class="result win">
+                <img id="win" src="media/happy.svg" alt="W">
+                <img id="lose" src="media/dead.svg" alt="L">
+            </div></div>
         <div class="minefield">
             <table>
                 <tr>
-                    <td class="c1 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c2 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c3 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c4 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c5 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c6 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c7 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c8 hidden"><img src="media/bomb.svg" alt=""></td>
+                    <td class="c1 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c2 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c3 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c4 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c5 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c6 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c7 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c8 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
                 </tr>
                 <tr>
-                    <td class="c9 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c10 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c11 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c12 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c13 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c14 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c15 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c16 hidden"><img src="media/bomb.svg" alt=""></td>
+                    <td class="c9 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c10 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c11 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c12 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c13 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c14 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c15 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c16 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
                 </tr>
                 <tr>
-                    <td class="c17 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c18 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c19 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c20 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c21 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c22 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c23 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c24 hidden"><img src="media/bomb.svg" alt=""></td>
+                    <td class="c17 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c18 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c19 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c20 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c21 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c22 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c23 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c24 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
                 </tr>
                 <tr>
-                    <td class="c25 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c26 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c27 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c28 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c29 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c30 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c31 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c32 hidden"><img src="media/bomb.svg" alt=""></td>
+                    <td class="c25 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c26 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c27 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c28 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c29 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c30 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c31 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c32 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
                 </tr>
                 <tr>
-                    <td class="c33 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c34 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c35 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c36 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c37 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c38 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c39 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c40 hidden"><img src="media/bomb.svg" alt=""></td>
+                    <td class="c33 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c34 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c35 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c36 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c37 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c38 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c39 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c40 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
                 </tr>
                 <tr>
-                    <td class="c41 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c42 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c43 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c44 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c45 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c46 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c47 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c48 hidden"><img src="media/bomb.svg" alt=""></td>
+                    <td class="c41 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c42 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c43 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c44 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c45 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c46 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c47 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c48 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
                 </tr>
                 <tr>
-                    <td class="c49 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c50 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c51 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c52 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c53 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c54 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c55 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c56 hidden"><img src="media/bomb.svg" alt=""></td>
+                    <td class="c49 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c50 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c51 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c52 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c53 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c54 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c55 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c56 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
                 </tr>
                 <tr>
-                    <td class="c57 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c58 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c59 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c60 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c61 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c62 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c63 hidden"><img src="media/bomb.svg" alt=""></td>
-                    <td class="c64 hidden"><img src="media/bomb.svg" alt=""></td>
+                    <td class="c57 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c58 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c59 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c60 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c61 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c62 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c63 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
+                    <td class="c64 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
                 </td>
 
             </table>

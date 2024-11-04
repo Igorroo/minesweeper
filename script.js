@@ -114,7 +114,11 @@ document.querySelectorAll(".hidden").forEach(element => {
     element.addEventListener("click", function() {
         this.classList.replace("hidden","shown")
         if(this.classList.contains("bomb")){
-            document.querySelector(".result>div").innerHTML="Lose"
+            document.querySelector(".result").classList.replace("win","lose");
+            document.querySelector("body>div").classList.add("blood");
+            uncoverAll()
+        }else{
+            document.querySelector(".result").classList.replace("lose","win")
         }
     });
 });
@@ -175,11 +179,24 @@ function uncoverNear(className) {
             }
         }
     }
-    if(uncoveredTilesCounter>=56){
-        document.querySelector(".result>div").innerHTML=("win")
+    if(uncoveredTilesCounter>=56 && !document.querySelector("body>div").classList.contains("blood")){
+        alert("You win!")
         console.log("You Win!");
+        uncoverAll();
     }else{
         console.log(uncoveredTilesCounter+" tiles uncovered from 56");
     }
 }
 getRandom()
+
+function uncoverAll(){
+    for (let row = 1; row < 9; row++) {
+        for (let col = 1; col < 9; col++) {
+            let toUncover = document.querySelector(".c" + minefieldTemplate[row-1][col-1]);
+            toUncover.classList.replace("hidden","shown");
+            if(toUncover.classList.contains("bomb")){
+                toUncover.classList.replace("bomb","flag");
+            }
+        }
+    }
+}

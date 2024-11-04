@@ -11,11 +11,37 @@ body{
     font-family: "Aldrich", sans-serif;
     font-weight: 1000;
     font-style: normal;
+    background-color: #333;
+}
+body>div{
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    height: 100vw;
+    background-image:url(media/blood.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    top: -600px;
+    transition: 0.3s cubic-bezier(1,-0.14,.72,1.2);
+    transform: scale(0);
+}
+body>div.blood{
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    height: 100vw;
+    background-image:url(media/blood.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    top: -200px;
+    transform: scale(1);
 }
 main{
     background-color: darkgray;
     width: 256px;
-    height: calc(256px + 40px);
+    height: calc(256px + 32px);
 }
 .topBar{
     height: 32px;
@@ -111,13 +137,13 @@ td.hidden{
 
 }
 td.noBomb>img{
-    opacity: 0;
+    scale: 0;
 }
 td.bomb.shown>img{
-    opacity: 1;
+    scale: 1;
 }
 td.bomb.hidden>img{
-    display: none;
+    scale: 0.5;
 }
 td.num1.shown{
     color: rgb(0, 170, 0);
@@ -145,4 +171,29 @@ td.num8.shown{
 }
 td.num9.shown{
     border-color: red;
+}
+
+.result.win>#win{
+    display: block;
+}
+.result.win>#lose{
+    display: none;
+}
+.result.lose>#win{
+    display: none;
+}
+.result.lose>#lose{
+    display: block;
+}
+td.flag>.bombIcon{
+    display: none;
+}
+td.flag>.flagIcon{
+    display: block;
+}
+td.bomb>.flagIcon{
+    display: none;
+}
+td.bomb>.bombIcon{
+    display: block;
 }
