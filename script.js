@@ -20,6 +20,18 @@ let minefieldTemplate = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   ];
+
+  function easyMode(){
+    let table = document.querySelector("table");
+    table.classList.toggle("normal");
+    table.classList.toggle("debug");
+    if(table.classList.contains("debug")){
+        document.querySelector("body>div.title>h2").innerHTML = ("Debug Mode");
+    }else{
+        document.querySelector("body>div.title>h2").innerHTML = ("");
+    }
+    
+  }
   let mineCounter=0;
   for(let i=0; i<8; i++){
         for(let j=0; j<8; j++){
@@ -115,8 +127,9 @@ document.querySelectorAll(".hidden").forEach(element => {
         this.classList.replace("hidden","shown")
         if(this.classList.contains("bomb")){
             document.querySelector(".result").classList.replace("win","lose");
-            document.querySelector("body>div").classList.add("blood");
+            document.querySelector("body>div.overlay").classList.add("blood");
             uncoverAll()
+            // window.close();
         }else{
             document.querySelector(".result").classList.replace("lose","win")
         }
@@ -179,7 +192,7 @@ function uncoverNear(className) {
             }
         }
     }
-    if(uncoveredTilesCounter>=56 && !document.querySelector("body>div").classList.contains("blood")){
+    if(uncoveredTilesCounter>=56 && !document.querySelector("body>div.overlay").classList.contains("blood")){
         alert("You win!")
         console.log("You Win!");
         uncoverAll();

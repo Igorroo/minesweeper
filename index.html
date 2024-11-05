@@ -8,17 +8,20 @@
     <script src="script.js"  defer></script>
 </head>
 <body>
-    <div></div>
+    <div class="title">
+        <h2></h2>
+    </div>
+    <div class="overlay"></div>
     <main>
         <div class="topBar">
-            <div class="play" onclick="getRandom()"><img src="media/play.svg" alt=""></div>
+            <div class="easyMode" onclick="easyMode()">D</div>
             <div class="reset" onclick="location.reload()"><img src="media/refresh.svg" alt=""></div>
             <div class="result win">
                 <img id="win" src="media/happy.svg" alt="W">
                 <img id="lose" src="media/dead.svg" alt="L">
             </div></div>
         <div class="minefield">
-            <table>
+            <table class="normal">
                 <tr>
                     <td class="c1 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
                     <td class="c2 hidden"><img class="bombIcon" src="media/bomb.svg" alt=""><img class="flagIcon" src="media/flag.svg" alt=""></td>
